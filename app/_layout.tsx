@@ -1,19 +1,17 @@
 import { useEffect } from 'react';
-import { router, Slot } from 'expo-router';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { Slot } from 'expo-router';
+import * as SplashScreen from 'expo-splash-screen';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
-import { useAuthStore } from '../src/stores/auth.store';
+
+SplashScreen.preventAutoHideAsync();
 
 const queryClient = new QueryClient();
 
 export default function RootLayout() {
-  const user = useAuthStore((s) => s.user);
-
   useEffect(() => {
-    if (!user) {
-      router.replace('/onboarding/welcome');
-    }
-  }, [user]);
+    SplashScreen.hideAsync();
+  }, []);
 
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
