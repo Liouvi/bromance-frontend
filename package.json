@@ -2,22 +2,40 @@
   "name": "bromance",
   "license": "0BSD",
   "version": "1.0.0",
-  "main": "index.ts",
+  "main": "expo-router/entry",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "lint": "eslint . --ext .ts,.tsx",
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "expo": "~55.0.4",
+    "expo-router": "~5.1.0",
     "expo-status-bar": "~55.0.4",
+    "expo-secure-store": "~14.2.0",
+    "expo-notifications": "~0.31.0",
+    "expo-image-picker": "~16.1.0",
+    "expo-linking": "~7.1.0",
+    "expo-constants": "~17.1.0",
     "react": "19.2.0",
-    "react-native": "0.83.2"
+    "react-native": "0.83.2",
+    "react-native-screens": "~4.5.0",
+    "react-native-safe-area-context": "5.4.0",
+    "react-native-reanimated": "~3.17.4",
+    "react-native-gesture-handler": "~2.24.0",
+    "axios": "^1.7.9",
+    "zustand": "^5.0.3",
+    "@tanstack/react-query": "^5.62.16",
+    "lottie-react-native": "^7.2.2"
   },
   "devDependencies": {
     "@types/react": "~19.2.2",
-    "typescript": "~5.9.2"
+    "typescript": "~5.9.2",
+    "eslint": "^8.57.0",
+    "eslint-config-expo": "^8.0.0"
   },
   "private": true
 }

@@ -1,5 +1,10 @@
-import { View } from 'react-native';
+import { View, Text } from 'react-native';
+import { colors } from '../../../src/constants/colors';
 
-export default function Screen() {
-  return <View />;
+export default function PhotosScreen() {
+  return (
+    <View style={{ flex: 1, backgroundColor: colors.background, justifyContent: 'center', alignItems: 'center' }}>
+      <Text style={{ color: colors.text }}>photos</Text>
+    </View>
+  );
 }
