@@ -1,10 +1,10 @@
 import { View, Text } from 'react-native';
 import { colors } from '../../../src/constants/colors';
 
-export default function Training-typesScreen() {
+export default function TrainingTypesScreen() {
   return (
     <View style={{ flex: 1, backgroundColor: colors.background, justifyContent: 'center', alignItems: 'center' }}>
-      <Text style={{ color: colors.text }}>training-types</Text>
+      <Text style={{ color: colors.text }}>TrainingTypes</Text>
     </View>
   );
 }
